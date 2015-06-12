@@ -1,0 +1,27 @@
+# Dependencies
+markdown:            redcarpet
+highlighter:         pygments
+
+# Permalinks
+#
+# Use of `relative_permalinks` ensures post links from the index work properly.
+permalink:           pretty
+relative_permalinks: true
+
+# Setup
+title:               Jobin Wang
+tagline:             '周一至周五 聊聊产品和运营'
+description:         '饿了么产品经理。<br/>正在记录着2年多的产品和运营思考。每周一至周五13：00更新博客。'
+url:                 http://www.bigbing.net
+baseurl:             /
+paginate:            5
+
+# About/contact
+author:
+  name:              Bing
+  url:               https://twitter.com/bing_xie
+  email:             bing708@gmail.com
+
+# Custom vars
+version:             1.0.0
+

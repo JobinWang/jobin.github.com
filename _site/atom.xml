@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Jobin Wang</title>
+ <link href="http://www.bigbing.net/atom.xml" rel="self"/>
+ <link href="http://www.bigbing.net/"/>
+ <updated>2015-06-12T11:28:14+08:00</updated>
+ <id>http://www.bigbing.net</id>
+ <author>
+   <name>Bing</name>
+   <email>bing708@gmail.com</email>
+ </author>
+
+ 
+ <entry>
+   <title>2015 Google I/O</title>
+   <link href="http://www.bigbing.net/2015/05/30/google-io/"/>
+   <updated>2015-05-30T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/05/30/google-io</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/images/bing_624.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;今天比较仔细得把2015 Google I/O大会的Keynote看了一遍。作为忠实的Google用户，
+还是非常高兴看到Android M, Android Wear, Google Now, Google Pictures这些产品在功能和用户体验上的改进与创新。&lt;/p&gt;
+
+&lt;p&gt;同时，作为一位Web开发者，我会重点关注下面这些内容&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.polymer-project.org/1.0/&quot;&gt;polymer 1.0&lt;/a&gt;是一个用来开发web component的工具，同时他也提供了很多现成的web components，这有可能是接下来的趋势，值得关注。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.firebase.com/&quot;&gt;Firbase&lt;/a&gt;: 是Google的用户支持手机App开发的后端服务,可以用户快速大家应用。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/cloud-test-lab/&quot;&gt;Cloud Test Lab&lt;/a&gt;: 可以同时测试很多种不同的终端手机的测试平台。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://cloud.google.com/&quot;&gt;Google cloud platform&lt;/a&gt;：Google的云计算平台，包括很多强大的服务。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://developers.google.com/cloud-messaging/&quot;&gt;Cloud messaging&lt;/a&gt;:发送消息到浏览器或者手机应用终端，关键还是免费的，值得一试。&lt;/p&gt;
+
+&lt;p&gt;去年Cardboard没有吸引到我的注意力，今年又提到了，所以我赶紧搞了一个cardboard体验了一下,这东西还真的挺适合用在教育领域。&lt;/p&gt;
+
+&lt;p&gt;印象深刻的还有就是Google多次提到的下一个一百万用户的问题，主要是一些来自落后地区的用户，Google为此，对很多产品进行了优化，
+比如允许提前下载youtube视频，Google地图支持脱机使用等，充分体现了Google对用户的关怀和Google作为一家伟大公司的情怀。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>慈，俭，不敢为天下先</title>
+   <link href="http://www.bigbing.net/2015/05/26/about-laozi/"/>
+   <updated>2015-05-26T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/05/26/about-laozi</id>
+   <content type="html">&lt;p&gt;引自&lt;a href=&quot;https://www.youtube.com/watch?v=SUrj9lvn1rU&quot;&gt;罗辑思维 第121期 丰满理想下的残酷杀戮&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;节目中推荐了两本跟老子有关的书： 《道可道》 《天堂茶话》&lt;/p&gt;
+
+&lt;p&gt;道家有三宝：一曰慈，二曰俭，三曰不敢为天下先&lt;/p&gt;
+
+&lt;p&gt;简单说来就是：对人，对钱，对事稍微搂着点&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;慈：仁慈，对人搂着点&lt;/li&gt;
+&lt;li&gt;俭：俭朴，对钱搂着点&lt;/li&gt;
+&lt;li&gt;不敢为天下先：再大再大的好事也不要太兴奋，全身心的扑上去。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;一、对世界要抱有充分的好奇心&lt;/p&gt;
+
+&lt;p&gt;二、对任何一种新东西，抱有一种小心翼翼试试的心态&lt;/p&gt;
+
+&lt;p&gt;三、对任何东西都不要亢奋，不管说的有多好，都不值得亢奋得全身扑上&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>搞清楚Rails中的eager loading</title>
+   <link href="http://www.bigbing.net/2015/05/20/rails-eager-loading/"/>
+   <updated>2015-05-20T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/05/20/rails-eager-loading</id>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;/images/bing_623.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;在Rails中eager loading这词比较抽象，其实就是preloading的意思。就是尽可能把后面需要的数据，通过最少的sql语句一起查询出来，从数据库的角度就是充分利用Join的功能，解决N+1查询的问题。&lt;/p&gt;
+
+&lt;p&gt;在Rails中常用下面三个方法来preload数据：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;#includes&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#preload&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;#eager_load&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;实验的时候，建立了下面两个model：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;user&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:string&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;email&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;rails&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;g&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;model&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;address&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;country&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;city&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;postal_code&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;street&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;references&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;直接使用joins是不能preload关联的数据：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;#只能查出users，使用的是INNER JOIN&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;joins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Rails使用两种方法来提前加载数据&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;使用多条单独的查询获取数据 （例如：&lt;code&gt;#preload&lt;/code&gt;）&lt;/li&gt;
+&lt;li&gt;使用一条LEFT JOIN语句获取数据 （例如：&lt;code&gt;#eager_load&lt;/code&gt;)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;那么&lt;code&gt;#includes&lt;/code&gt;是怎么样的呢？&lt;/p&gt;
+
+&lt;p&gt;在Rails3中，&lt;code&gt;#includes&lt;/code&gt;会自动根据查询的条件决定采用那种方式：&lt;/p&gt;
+
+&lt;p&gt;所以，下面两种情况产生的语句是一样的：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eager_load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;实现的逻辑是：&lt;code&gt;#includes&lt;/code&gt;通过判断where查询条件中的表名也是addresses，然后把查询代理给了&lt;code&gt;#eager_load&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;一个特别的需求，如果我要查询出符合条件的user，同时附带该user所有的addresses，这个时候我们就要用到&lt;code&gt;#joins&lt;/code&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;joins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这句的效果和上面两句是类似的，并没有查询出用户的所有地址，有一点区别就是使用的INNER JOIN&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;joins&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;preload&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这条使用&lt;code&gt;#preload&lt;/code&gt;会用另外一条单独的语句查询出user的所有addresses&lt;/p&gt;
+
+&lt;p&gt;在Rails4中又有什么不同呢？&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;会抛出SQLite3::SQLException: no such column: addresses.country 异常，所以rails4已经不会自动帮你使用&lt;code&gt;#eager_load&lt;/code&gt;方法了。&lt;/p&gt;
+
+&lt;p&gt;Rails4中需要显式地用references指定要preload的关联表：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;includes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;references&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;在rails4中等同于：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;User&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;eager_load&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:addresses&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;addresses.country = ?&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Poland&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;所以用&lt;code&gt;#preload&lt;/code&gt;就是明确指定，让rails单独再发送一条查询语句查询关联表里面的数据，而用&lt;code&gt;#eager_load&lt;/code&gt;就是尽可能用一条LEFT JOIN语句搞定。&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>推荐学习git的基本原理的两个视频</title>
+   <link href="http://www.bigbing.net/2015/04/18/basic-git/"/>
+   <updated>2015-04-18T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/04/18/basic-git</id>
+   <content type="html">&lt;p&gt;最近通过两个非常好的视频学习了一些git的基本原理，其中包括了git的对象模型，对象的组织方式等。
+在理解了这些基本的原理后，再使用git的命令，就会比较清楚什么是merge，什么是rebase等，以及在不同的场合下合理得使用git命令。&lt;/p&gt;
+
+&lt;p&gt;第一个视频是&lt;a href=&quot;https://pragprog.com/book/ppmetr2/metaprogramming-ruby-2&quot;&gt;《Metaprogramming Ruby》&lt;/a&gt;的作者Paolo Perrotta讲的Wrapping Your Head Around Git，我发现他总是非常擅长讲述一些原理性的知识，让你通过了解底层的原理，来更加扎实得掌握一门技术。
+&lt;iframe width=&quot;700&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/RwYbl_tpoVE&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/p&gt;
+
+&lt;p&gt;第二个视频是Introduction to Git with Scott Chacon of GitHub, Scott Chacon在github工作, 是git方面的大牛。虽然这个视频是2011年的，但是里面讲的原理和基本概念还是非常有用，绝对没有过时的。&lt;/p&gt;
+
+&lt;iframe width=&quot;700&quot; height=&quot;400&quot; src=&quot;https://www.youtube.com/embed/ZDR433b0HJY&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>在Ruby的Case表达式中使用Lambda/Proc</title>
+   <link href="http://www.bigbing.net/2015/03/19/lambda-proc-case-expressions/"/>
+   <updated>2015-03-19T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/03/19/lambda-proc-case-expressions</id>
+   <content type="html">&lt;p&gt;大部分的Ruby开发者都知道在&lt;code&gt;case&lt;/code&gt;表达式中的&lt;code&gt;when&lt;/code&gt;后面可以使用直接量，类，范围(Range)和正则表达式：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/some_regexp/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;你可能也知道在&lt;code&gt;case&lt;/code&gt;中实际是使用&lt;code&gt;===&lt;/code&gt;方法来进行比较。Ruby会将上面的代码象下面一样执行：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/some_regexp/&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;something&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;当然你可能不知道&lt;code&gt;Proc&lt;/code&gt;类中也定义了&lt;code&gt;===&lt;/code&gt;方法，用于执行&lt;code&gt;proc&lt;/code&gt;或者&lt;code&gt;lambda&lt;/code&gt;。相当于把&lt;code&gt;===&lt;/code&gt;右边的参数作为参数传递给&lt;code&gt;Proc#call&lt;/code&gt;方法，例如：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;is_even&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;even?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;is_even&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# =&amp;gt; false&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# same as&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;is_even&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;call&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这样我们就可以在&lt;code&gt;when&lt;/code&gt;的后面使用&lt;code&gt;proc&lt;/code&gt;或&lt;code&gt;lambda&lt;/code&gt;，下面是一个非常简单的例子：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;even?&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;even?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;odd?&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;odd?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;even?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;even&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;odd?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;odd&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Impossible!&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;也可以直接在&lt;code&gt;when&lt;/code&gt;的后面定义&lt;code&gt;lambda&lt;/code&gt;，例如：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;even?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;even&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;odd?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;odd&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Impossible!&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;因为&lt;code&gt;proc&lt;/code&gt;或&lt;code&gt;lambda&lt;/code&gt;的闭包特性，所以可以给&lt;code&gt;lambda&lt;/code&gt;的定义方法传递参数，进行更强大的比较功能：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;response_code?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response_code?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;OK&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response_code?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;404&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Not found&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Unknown code&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;下面是一个在具体项目中使用的用于对&lt;code&gt;Array&lt;/code&gt;进行模式匹配的方法：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;expected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;expected&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;zip&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;actual&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;all?&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;act&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;exp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;act&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;__&lt;/span&gt;
+  &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;使用时就可以像下面这样对&lt;code&gt;Array&lt;/code&gt;进行匹配：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;matches when a is `true`&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;matches when a and b are `true`&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;matches when b is `true`&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;matches when a is `false` and b is number in range 4-10&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;matches&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Hash&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+ &lt;span class=&quot;s2&quot;&gt;&amp;quot;matches when a is an `Array` and b is a `Hash`&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;本文参考：
+&lt;a href=&quot;http://batsov.com/articles/2013/09/24/lambdas-slash-procs-in-case-expressions/&quot;&gt;Lambdas/Procs in Case Expressions&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>我的家庭工作站</title>
+   <link href="http://www.bigbing.net/2015/03/06/my-home-work-station/"/>
+   <updated>2015-03-06T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/03/06/my-home-work-station</id>
+   <content type="html">&lt;p&gt;最近由于很多时间是在家里工作的，所以就需要把家里的工作环境和设施弄得舒服，实用一些。&lt;/p&gt;
+
+&lt;p&gt;今天终于把看了很久的Dell U2913WM 29寸的显示器买了回来，这个显示器的比例很特别是21：9的，所以看上去很宽。分辨率是2560*1080，并不是最牛的4k显示器。这是由于我的需求决定，我想用一个显示器来显示两屏的代码，而且4k的显示器，有时候应用菜单或者标题很小，经常需要调整字体大小。当然价钱也是一个考虑因素，这款显示器非常实惠，网上买的价格：580澳币。&lt;/p&gt;
+
+&lt;p&gt;小插曲：显示器自带了一根DisplayPort-Mini DisplayPort的线，我的Macbook Pro是可以用，但是一开始显示效果不好，代码看上去模糊，我尝试了各种办法进行调校都没有搞定，准备换一根Mini DisplayPort-Mini DisplayPort的线再试试。后来，我随手升级了一些MacOS的补丁，重启后发现就正常了。&lt;/p&gt;
+
+&lt;p&gt;今天还买了宜家的电脑椅，我这屁股对椅子比较挑剔，有一次在一个朋友家坐了几次宜家的电脑椅，发现很舒服。所以就果断买了，型号是：MALKOLM Swivel chair，买之前我专门买了一杯咖啡，然后到宜家的showroom，坐着这把椅子把咖啡喝完。&lt;/p&gt;
+
+&lt;p&gt;接下来其实我还想买的就是能够自由升降，可以站立或者坐着办公的桌子，我喜欢站着工作，同时对身体也好。宜家美国的网站已经有有一款这样的新产品BEKANT Desk sit/stand，澳洲这里还没有，再等等吧。不过我在澳洲发现了款不错的替代产品&lt;a href=&quot;http://au.varidesk.com/&quot;&gt;VARIDESK&lt;/a&gt;，可以直接放到已有的桌子上进行升降，不需要买一个新的桌子。&lt;/p&gt;
+
+&lt;p&gt;看，这就是我现在工作桌面的样子。
+&lt;img src=&quot;/images/my-station.jpg&quot; alt=&quot;My work station&quot; title=&quot;My work station&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;其他的宝贝还有：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Bose QuietComfort 25 强力消音耳机（很给力，娃再哭再闹都听不见！）&lt;/li&gt;
+&lt;li&gt;Macbook Pro&lt;/li&gt;
+&lt;li&gt;NSO Power Ball (神奇健身球)&lt;/li&gt;
+&lt;li&gt;微软的无线键盘鼠标&lt;/li&gt;
+&lt;li&gt;黑色的Mug （简直太配了！）&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>常用Ruby Gems列表（持续更新）</title>
+   <link href="http://www.bigbing.net/2015/02/13/useful-gems/"/>
+   <updated>2015-02-13T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/02/13/useful-gems</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/roidrage/lograge&quot;&gt;lograge&lt;/a&gt; - 精简rails log的gem&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://brakemanscanner.org/&quot;&gt;brakeman&lt;/a&gt; - 检查应用安全漏洞的gem&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bbatsov/rubocop&quot;&gt;rubocop&lt;/a&gt; - 检查code style&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/michaeldv/awesome_print&quot;&gt;awesome_print&lt;/a&gt; - 漂亮得打印出ruby的对象&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/bkeepers/dotenv&quot;&gt;dotenv-rails&lt;/a&gt; - 方便配置和使用&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/ctran/annotate_models&quot;&gt;annotate&lt;/a&gt; - 给ActiveRecord等model加注释&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/RubyMoney/money&quot;&gt;money&lt;/a&gt; - 处理钱或货币的gem&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/RubyMoney/money-rails&quot;&gt;money-rails&lt;/a&gt; - Ruby Money与Rails的整合&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>学习使用cucumber和相关技巧</title>
+   <link href="http://www.bigbing.net/2015/02/12/learn-cucumber/"/>
+   <updated>2015-02-12T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/02/12/learn-cucumber</id>
+   <content type="html">&lt;h3&gt;参考资料&lt;/h3&gt;
+
+&lt;p&gt;这次系统得学习一下cucumber，首先还是通过几个railscasts上的视频进行学习，虽然里面使用的是rails2，我还是用rails3及相关的gem重新实现了一遍。
+实现代码：&lt;a href=&quot;https://github.com/bingxie/learn-cucumber&quot;&gt;Learn cucumber&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Railscasts上相关视频教程：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://railscasts.com/episodes/155-beginning-with-cucumber&quot;&gt;Beginning with Cucumber&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://railscasts.com/episodes/159-more-on-cucumber&quot;&gt;More on Cucumber&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://railscasts.com/episodes/186-pickle-with-cucumber&quot;&gt;Pickle with Cucumber&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;进一步深入学习的话还有两个资源可以参考：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder&quot;&gt;Cucumber Backgrounder&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://pragprog.com/book/achbd/the-rspec-book&quot;&gt;The Rspec Book&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3&gt;技巧及经验总结&lt;/h3&gt;
+
+&lt;h4&gt;命令行参数&lt;/h4&gt;
+
+&lt;p&gt;cucumber features&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;-r :用于指定在那个或者那些目录下面寻找匹配的step definition&lt;/li&gt;
+&lt;li&gt;-t :用于指定scenario的标签。例如： -t @focus, 或者排除指定标签： -t ~@focus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;工具&lt;/h4&gt;
+
+&lt;p&gt;Sublime可以安装&lt;code&gt;Sublime Gherkin Formatter&lt;/code&gt;这个插件,可以用于格式化表格数据，快捷键是：&lt;code&gt;&amp;lt;Cmd&amp;gt; + &amp;lt;Shift&amp;gt; + |&lt;/code&gt;&lt;/p&gt;
+
+&lt;h4&gt;DRY&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;可以使用background定义一系列的scenario需要用到步骤&lt;/li&gt;
+&lt;li&gt;可以使用scenario outline定义类似的一组测试&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4&gt;使用launchy gem调试&lt;/h4&gt;
+
+&lt;ol&gt;
+&lt;li&gt;可以使用step: &lt;code&gt;Then show me the page&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以在step的定义里面调用: &lt;code&gt;save_and_open_page&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;可以用下面的方法当测试失败时，自动打开页面调试：&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;新建&lt;code&gt;/features/support/debugging.rb&lt;/code&gt;,
+添加代码：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;no&quot;&gt;After&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;scenario&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;save_and_open_page&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;scenario&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;failed?&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;debug&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;open&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;然后运行测试时加上debug环境变量&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;cucumber features debug=open&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h4&gt;使用World扩展cucumber&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用Class进行扩展
+例如，需要反复用到用户登录的功能，可以重构一个helper方法：&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# features/support/login_helpers.rb&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;LoginHelpers&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;login_user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;username&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;visit&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;/login&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fill_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;user name&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:with&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;username&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;fill_in&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;password&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:with&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;tester&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;click_button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;login&amp;quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;page&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;have_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;welcome&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;another_logging_method&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;World&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;LoginHelpers&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;new&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# features/step_definitions/user/login.rb&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;When&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^&amp;quot;(.?)&amp;quot; logs in do |username|&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;  login_user(username)&lt;/span&gt;
+&lt;span class=&quot;sr&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使用Module扩展&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;c1&quot;&gt;# features/support/paths.rb&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;NavigationHelpers&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;path_to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;page_name&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/the homepage/&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;root_path&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/the list of (.+)/&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;send&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;_path&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;when&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/the show page for (.+)/&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;polymorphic_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;model&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vg&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Can&amp;#39;t find mapping from &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;page_name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&amp;quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; to a path.&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用subdomain开发和测试rails应用(二)</title>
+   <link href="http://www.bigbing.net/2015/02/11/rails-applications-with-subdomains/"/>
+   <updated>2015-02-11T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/02/11/rails-applications-with-subdomains</id>
+   <content type="html">&lt;p&gt;基于上一篇blog&lt;a href=&quot;http://localhost:4000/2015/02/10/dev-and-test-rails-applications-with-subdomains/&quot;&gt;使用subdomain开发和测试rails应用(一)&lt;/a&gt;，已经知道如何在开发和测试环境中配置和使用subdomain。这篇blog主要结合实例代码，介绍如何在rails应用内处理subdomain。&lt;/p&gt;
+
+&lt;h3&gt;Blog应用实例&lt;/h3&gt;
+
+&lt;p&gt;实例代码基于Railscasts上的&lt;a href=&quot;https://github.com/railscasts/123-subdomains-revised/tree/master/blogs-before&quot;&gt;blog-before&lt;/a&gt;，升级了一下gem的版本。&lt;/p&gt;
+
+&lt;p&gt;更新后的代码github地址：&lt;a href=&quot;https://github.com/bingxie/blogs-subdomains&quot;&gt;blog-subdomain&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;应用场景：一个Blog应用网站，用户可以有自己的blog，每个用户的blog有subdomain，例如：bing.blogs.dev&lt;/p&gt;
+
+&lt;p&gt;subdomain的值，在rails中时存放在request的实例中的。&lt;/p&gt;
+
+&lt;p&gt;配置routes：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;blogs#show&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;constraints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/.+/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;在Blog controller的show action中，使用subdomain来获取blog实例：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@blog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_by_subdomain!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;在首页上连接各个blog的地址:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link_to&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;由于所有的articles都存在同一个表中，所以获取文章的时候，要先通过subdomain获取blog实例，然后通过blog获取articles&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;vi&quot;&gt;@blog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find_by_subdomain!&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;vi&quot;&gt;@article&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@blog&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;articles&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;find&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;params&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;支持www子域名访问&lt;/h3&gt;
+
+&lt;p&gt;我们希望用户输入www.blogs.dev时访问blog的列表，而不是说找不到subdomain。
+通过rails的constrains有两种方法实现：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;方法一： 在constrains选项中用lamada&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;nb&quot;&gt;lambda&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;present?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;r&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;www&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;另外一种使用正则表达式的方法：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;ss&quot;&gt;constraints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^(?!www$)(.+)$/i&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+&lt;li&gt;方法二： 定义专门的类，适合于逻辑比较复杂的情况&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Subdomain&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;matches?&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;present?&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;www&amp;quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;在routes中：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;constraints&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;match&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;/&amp;#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;blogs#show&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# more ...&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;连接到有www的主页：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link_to&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Home&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;www&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;连接到无www的主页：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link_to&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Home&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;root_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;可以配置默认不使用subdomian：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;action_controller&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;default_url_options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;总结rails constrains的使用&lt;/h3&gt;
+
+&lt;p&gt;上面的几段代码，也展示了最常见的rails routes中constrains的使用方法：&lt;/p&gt;
+
+&lt;p&gt;还有一种常见的就是限制传入的id参数的格式：
+resources :photos, :constraints =&amp;gt; {:id =&amp;gt; /[A-Z][A-Z][0-9]+/}&lt;/p&gt;
+
+&lt;p&gt;(完)&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用subdomain开发和测试rails应用(一)</title>
+   <link href="http://www.bigbing.net/2015/02/10/dev-and-test-rails-applications-with-subdomains/"/>
+   <updated>2015-02-10T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/02/10/dev-and-test-rails-applications-with-subdomains</id>
+   <content type="html">&lt;p&gt;这篇博客总结和展示在开发和测试rails应用的时候如何使用子域名subdomains&lt;/p&gt;
+
+&lt;h2&gt;开发环境 Developing&lt;/h2&gt;
+
+&lt;h3&gt;使用lvh.me&lt;/h3&gt;
+
+&lt;p&gt;如果在开发环境中使用的是webrick或者Puma服务器，可以通过lvh.me来访问子域名。例如：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;http://sub.lvh.me:3000&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;code&gt;lvh.me&lt;/code&gt;会被解析到localhost，这样就可以通过默认的3000端口访问子域名（Puma的默认端口是9292）。但是这种方法可能会慢一点。&lt;/p&gt;
+
+&lt;h3&gt;修改hosts文件&lt;/h3&gt;
+
+&lt;p&gt;为了减少来回的跳转，可以通过修改hosts文件来访问子域名，在Mac下是&lt;code&gt;/etc/hosts&lt;/code&gt;. 例如：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;127.0.0.1 sub.virtual.local&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然后你还是可以使用这个域名加默认的端口来访问应用：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;http://sub.virtural.local:3000&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3&gt;使用Pow（仅限Mac）&lt;/h3&gt;
+
+&lt;p&gt;Pow本身非常好得支持子域名：&lt;a href=&quot;http://pow.cx/manualhtml#section_1&quot;&gt;安装Pow&lt;/a&gt;, 连接应用，然后就可以通过子域名访问应用：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;sub.app-name.dev&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;你可以使用&lt;a href=&quot;https://github.com/Rodreegez/powder&quot;&gt;powder gem&lt;/a&gt;, 方便安装和管理pow。&lt;/p&gt;
+
+&lt;h2&gt;测试环境 Testing&lt;/h2&gt;
+
+&lt;p&gt;Capybara在测试应用时需要访问真实的服务器，所以在测试环境下也需要解决子域名的问题。&lt;/p&gt;
+
+&lt;h3&gt;CI&lt;/h3&gt;
+
+&lt;p&gt;最简单的方法就是使用&lt;code&gt;lvh.me&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;添加几个helper方法，例如：&lt;cite&gt;&lt;code&gt;spec/support/subdomains.rb&lt;/code&gt;&lt;/cite&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;switch_to_subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# lvh.me总是解析到127.0.0.1&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Capybara&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app_host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.lvh.me&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;switch_to_main_domain&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# Capybara.app_host = &amp;quot;http://lvh.me&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;然后在feature测试中就可以使用：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;switch_to_subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;sub&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3&gt;在本机测试&lt;/h3&gt;
+
+&lt;p&gt;虽然上面的方法在本机也是可行的，但是还是会浪费时间在来回跳转上,下面的方法更加好用。
+首先还是跟上面一样修改&lt;code&gt;hosts&lt;/code&gt;文件：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;127.0.0.1 sub.virtual.local&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;在本机设置环境变量 (例如：LOCALVIRTUALHOST，推荐使用dotenv-rails gem)
+在&lt;code&gt;.env&lt;/code&gt;中添加：&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;LOCAL&lt;em&gt;VIRTUAL&lt;/em&gt;HOST  = virtual.local&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;然后修改&lt;cite&gt;&lt;code&gt;spec/support/subdomains.rb&lt;/code&gt;&lt;/cite&gt;：&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;local_virtual_host&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;LOCAL_VIRTUAL_HOST&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;lvh.me&amp;#39;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;switch_to_subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Capybara&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app_host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;subdomain&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local_virtual_host&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;switch_to_main_domain&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Capybara&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;app_host&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;http://&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;local_virtual_host&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;这样可以使得本机的测试更快一些，还有一个需要注意的地方是，如果你有多个子域名，你不能在&lt;code&gt;hosts&lt;/code&gt;文件中使用通配符，例如：&lt;code&gt;*.virtual.local&lt;/code&gt;。你需要一个一个得指定子域名。&lt;/p&gt;
+
+&lt;p&gt;参考：
+&lt;a href=&quot;https://reinteractive.net/posts/199-developing-and-testing-rails-applications-with-subdomains&quot;&gt;Developing and testing Rails applications with subdomains&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>产品环境 Nginx + Unicorn + Eye 的 Rails 应用配置</title>
+   <link href="http://www.bigbing.net/2015/02/09/rails-nginx-unicorn-eye/"/>
+   <updated>2015-02-09T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/02/09/rails-nginx-unicorn-eye</id>
+   <content type="html">&lt;p&gt;最近整理了一下个人项目产品环境的配置，加了一些注释，分享出来希望对大家有用。
+欢迎大家提改进建议。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Nginx的配置
+&lt;a href=&quot;https://gist.github.com/bingxie/a0039781a52ad908b0a2&quot;&gt;gist&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Unicorn的配置
+&lt;a href=&quot;https://gist.github.com/bingxie/0da00d3a22905cab30b7&quot;&gt;gist&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Eye配置
+&lt;a href=&quot;https://gist.github.com/bingxie/4684a7455edebbaa5a34&quot;&gt;gist&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>关于Ruby的时间</title>
+   <link href="http://www.bigbing.net/2015/01/29/about-ruby-time/"/>
+   <updated>2015-01-29T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/01/29/about-ruby-time</id>
+   <content type="html">&lt;h3&gt;TODO：主要内容&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;UTC &amp;amp; GMT&lt;/li&gt;
+&lt;li&gt;Time&lt;/li&gt;
+&lt;li&gt;Datetime&lt;/li&gt;
+&lt;li&gt;timecop
+Timecop.freeze(24.hours.from_now)&lt;/li&gt;
+&lt;li&gt;Timezone gem?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;ActiveSupport::TimeZone.new(&amp;quot;&amp;quot;).formatted_offset
+                               .local(*args)&lt;/p&gt;
+
+&lt;p&gt;now.in&lt;em&gt;time&lt;/em&gt;zone(&amp;#39;&amp;#39;)&lt;/p&gt;
+
+&lt;p&gt;now.change&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>HTML5 Boilerplate</title>
+   <link href="http://www.bigbing.net/2015/01/29/about-html5-boilerplate/"/>
+   <updated>2015-01-29T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/01/29/about-html5-boilerplate</id>
+   <content type="html">&lt;p&gt;&lt;a href=&quot;https://github.com/h5bp/html5-boilerplate&quot;&gt;HTML5 Boilerplate&lt;/a&gt;是一个非常流行的，用于快速构建健壮的web应用和站点的前端模板。
+它集合了社区中很多开发人员的经验。&lt;/p&gt;
+
+&lt;h3&gt;Features:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;轻量，适合移动应用开发，&lt;/li&gt;
+&lt;li&gt;包含优化了的Google Analytics的代码片段&lt;/li&gt;
+&lt;li&gt;包含了Normalize.css，还有一些基本的样式，helpers，media queries, print styles&lt;/li&gt;
+&lt;li&gt;包含了jQuery和Modernizr&lt;/li&gt;
+&lt;li&gt;还有实用的常用服务器的配置，比如：Apache, Nginx&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;可以通过&lt;a href=&quot;http://www.initializr.com/&quot;&gt;Initializr&lt;/a&gt;网站来自定义需要的模板，比如Responsive或者Bootstrap集成后的版本&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://www.quora.com/Is-Bootstrap-a-complement-OR-an-alternative-to-HTML5-Boilerplate-or-viceversa/answer/Nicolas-Gallagher&quot;&gt;Html5 Boilerplate和Bootstrap的集成&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/extend.md&quot;&gt;深入学习基于Html5 Boilerplate的开发&lt;/a&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
+   <title>使用Jekyll和GitHub Pages构建个人博客</title>
+   <link href="http://www.bigbing.net/2015/01/28/use-jekyll-and-github-pages-to-build-blog/"/>
+   <updated>2015-01-28T00:00:00+08:00</updated>
+   <id>http://www.bigbing.net/2015/01/28/use-jekyll-and-github-pages-to-build-blog</id>
+   <content type="html">&lt;p&gt;这篇Blog主要就是介绍我是如何使用Jekyll和GitHub pages快速得搭建了我的这个个人博客。&lt;/p&gt;
+
+&lt;p&gt;有几个很重要的前提决定了我采用这样的方案来搭建博客，而不是安装一个Wordpress或者其他的博客系统。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;我要有自己的域名，比如：www.bigbing.net&lt;/li&gt;
+&lt;li&gt;我不想自己架设服务器或者租借空间，我想要免费的东西&lt;/li&gt;
+&lt;li&gt;作为一个开发者，我想要用&lt;code&gt;markdown&lt;/code&gt;来写东西&lt;/li&gt;
+&lt;li&gt;我写好的东西，能够使用Git进行版本控制，而且备份到服务器上&lt;/li&gt;
+&lt;li&gt;最好我也能够在手机或者pad上编辑内容&lt;/li&gt;
+&lt;li&gt;我想要自己控制网站的样式和功能，或者有模板可以用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;基于这样的一些前提，我很容易的就发现了GitHub pages这个功能，能够满足我的需求。特别适合开发者使用，因为大部分开发者都已经有了GitHub的个人帐号，而GitHub pages支持使用Jekyll来快速生成网站页面和blog。&lt;/p&gt;
+
+&lt;p&gt;接下来我不会详细说明具体的步骤，我主要提供一些资源的连接，通过这些资源任何人都可以快速得搭建出自己的个人网站。&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;GitHub pages的官方&lt;a href=&quot;https://pages.github.com/&quot;&gt;快速上手指南&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;GitHub官方提供了一个GitHub Pages Gem, 帮助你快速配置好jekyll的开发运行环境，保持跟GitHub服务器上运行的环境一致，具体的&lt;a href=&quot;https://help.github.com/articles/using-jekyll-with-pages/&quot;&gt;使用文档&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;下面这是一篇很长，但是很实用，系统的介绍文章，里面也提供了很多相关资源的连接：&lt;a href=&quot;http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/&quot;&gt;Link&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;如果要深入研究Jekyll的使用，还是需要查看&lt;a href=&quot;http://jekyllrb.com/docs/home/&quot;&gt;官方文档&lt;/a&gt;，里面有很详细的配置说明和模板等使用方法。&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;我搭建的这个blog主要使用了这个叫&lt;a href=&quot;https://github.com/poole/lanyon&quot;&gt;lanyon&lt;/a&gt;的theme,另外还有一个出自同一个作者也不错的是叫&lt;a href=&quot;https://github.com/poole/hyde&quot;&gt;hyde&lt;/a&gt;,这两个开源的theme都是基于&lt;a href=&quot;https://github.com/poole/poole&quot;&gt;poole&lt;/a&gt;项目。&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+ </entry>
+ 
+
+</feed>

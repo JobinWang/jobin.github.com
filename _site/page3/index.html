@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  <!-- Enable responsiveness on mobile devices-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Jobin Wang &middot; 周一至周五 聊聊产品和运营
+    
+  </title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/public/css/poole.css">
+  <link rel="stylesheet" href="/public/css/syntax.css">
+  <link rel="stylesheet" href="/public/css/lanyon.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
+
+  <!-- Icons -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
+  <link rel="shortcut icon" href="/public/favicon.ico?v=1">
+
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="layout-reverse sidebar-overlay theme-base-0d">
+
+    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>饿了么产品经理。<br/>正在记录着2年多的产品和运营思考。每周一至周五13：00更新博客。</p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item" href="/">Home</a>
+
+    
+
+    
+    
+      
+        
+      
+    
+      
+        
+      
+    
+      
+        
+          <a class="sidebar-nav-item" href="/about/">About me</a>
+        
+      
+    
+      
+    
+      
+        
+      
+    
+      
+        
+      
+    
+
+  </nav>
+
+  
+</div>
+
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Jobin Wang</a>
+            <small>周一至周五 聊聊产品和运营</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        <div class="posts">
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/02/09/rails-nginx-unicorn-eye/">
+        产品环境 Nginx + Unicorn + Eye 的 Rails 应用配置
+      </a>
+    </h1>
+
+    <span class="post-date">09 Feb 2015</span>
+
+    <p>最近整理了一下个人项目产品环境的配置，加了一些注释，分享出来希望对大家有用。
+欢迎大家提改进建议。</p>
+
+<ul>
+<li><p>Nginx的配置
+<a href="https://gist.github.com/bingxie/a0039781a52ad908b0a2">gist</a></p></li>
+<li><p>Unicorn的配置
+<a href="https://gist.github.com/bingxie/0da00d3a22905cab30b7">gist</a></p></li>
+<li><p>Eye配置
+<a href="https://gist.github.com/bingxie/4684a7455edebbaa5a34">gist</a></p></li>
+</ul>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/01/29/about-ruby-time/">
+        关于Ruby的时间
+      </a>
+    </h1>
+
+    <span class="post-date">29 Jan 2015</span>
+
+    <h3>TODO：主要内容</h3>
+
+<ul>
+<li>UTC &amp; GMT</li>
+<li>Time</li>
+<li>Datetime</li>
+<li>timecop
+Timecop.freeze(24.hours.from_now)</li>
+<li>Timezone gem?</li>
+</ul>
+
+<p>ActiveSupport::TimeZone.new(&quot;&quot;).formatted_offset
+                               .local(*args)</p>
+
+<p>now.in<em>time</em>zone(&#39;&#39;)</p>
+
+<p>now.change</p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/01/29/about-html5-boilerplate/">
+        HTML5 Boilerplate
+      </a>
+    </h1>
+
+    <span class="post-date">29 Jan 2015</span>
+
+    <p><a href="https://github.com/h5bp/html5-boilerplate">HTML5 Boilerplate</a>是一个非常流行的，用于快速构建健壮的web应用和站点的前端模板。
+它集合了社区中很多开发人员的经验。</p>
+
+<h3>Features:</h3>
+
+<ul>
+<li>轻量，适合移动应用开发，</li>
+<li>包含优化了的Google Analytics的代码片段</li>
+<li>包含了Normalize.css，还有一些基本的样式，helpers，media queries, print styles</li>
+<li>包含了jQuery和Modernizr</li>
+<li>还有实用的常用服务器的配置，比如：Apache, Nginx</li>
+</ul>
+
+<p>可以通过<a href="http://www.initializr.com/">Initializr</a>网站来自定义需要的模板，比如Responsive或者Bootstrap集成后的版本</p>
+
+<p><a href="http://www.quora.com/Is-Bootstrap-a-complement-OR-an-alternative-to-HTML5-Boilerplate-or-viceversa/answer/Nicolas-Gallagher">Html5 Boilerplate和Bootstrap的集成</a></p>
+
+<p><a href="https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/extend.md">深入学习基于Html5 Boilerplate的开发</a></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2015/01/28/use-jekyll-and-github-pages-to-build-blog/">
+        使用Jekyll和GitHub Pages构建个人博客
+      </a>
+    </h1>
+
+    <span class="post-date">28 Jan 2015</span>
+
+    <p>这篇Blog主要就是介绍我是如何使用Jekyll和GitHub pages快速得搭建了我的这个个人博客。</p>
+
+<p>有几个很重要的前提决定了我采用这样的方案来搭建博客，而不是安装一个Wordpress或者其他的博客系统。</p>
+
+<ul>
+<li>我要有自己的域名，比如：www.bigbing.net</li>
+<li>我不想自己架设服务器或者租借空间，我想要免费的东西</li>
+<li>作为一个开发者，我想要用<code>markdown</code>来写东西</li>
+<li>我写好的东西，能够使用Git进行版本控制，而且备份到服务器上</li>
+<li>最好我也能够在手机或者pad上编辑内容</li>
+<li>我想要自己控制网站的样式和功能，或者有模板可以用</li>
+</ul>
+
+<p>基于这样的一些前提，我很容易的就发现了GitHub pages这个功能，能够满足我的需求。特别适合开发者使用，因为大部分开发者都已经有了GitHub的个人帐号，而GitHub pages支持使用Jekyll来快速生成网站页面和blog。</p>
+
+<p>接下来我不会详细说明具体的步骤，我主要提供一些资源的连接，通过这些资源任何人都可以快速得搭建出自己的个人网站。</p>
+
+<ol>
+<li><p>GitHub pages的官方<a href="https://pages.github.com/">快速上手指南</a></p></li>
+<li><p>GitHub官方提供了一个GitHub Pages Gem, 帮助你快速配置好jekyll的开发运行环境，保持跟GitHub服务器上运行的环境一致，具体的<a href="https://help.github.com/articles/using-jekyll-with-pages/">使用文档</a></p></li>
+<li><p>下面这是一篇很长，但是很实用，系统的介绍文章，里面也提供了很多相关资源的连接：<a href="http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/">Link</a></p></li>
+<li><p>如果要深入研究Jekyll的使用，还是需要查看<a href="http://jekyllrb.com/docs/home/">官方文档</a>，里面有很详细的配置说明和模板等使用方法。</p></li>
+<li><p>我搭建的这个blog主要使用了这个叫<a href="https://github.com/poole/lanyon">lanyon</a>的theme,另外还有一个出自同一个作者也不错的是叫<a href="https://github.com/poole/hyde">hyde</a>,这两个开源的theme都是基于<a href="https://github.com/poole/poole">poole</a>项目。</p></li>
+</ol>
+
+  </div>
+  
+</div>
+
+<div class="pagination">
+  
+    <span class="pagination-item older">Older</span>
+  
+  
+    
+      <a class="pagination-item newer" href="/page2">Newer</a>
+    
+  
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59108915-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
